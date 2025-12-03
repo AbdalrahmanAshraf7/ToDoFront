@@ -1,0 +1,34 @@
+import { QueryClient, useMutation, useQuery ,useQueryClient  } from '@tanstack/react-query'
+import axios from 'axios'
+
+
+export default function useMissionDelete() {
+
+const queryClient = useQueryClient();
+
+async function missionDelete(id:any) {
+    return axios.delete(`https://to-do-list-nu-beryl-37.vercel.app/api/deletemission/${id}`,{
+      headers:{
+        token:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjU5ZTc3MmNjYzYyNzEwNzQ5NTc5NyIsInVzZXJOYW1lIjoiYWJkcHBwdTc3IiwiZW1haWwiOiJhYmRhbHJhZ2dtNzduQGdtYWlsLmNvbSIsImlhdCI6MTc2NDA3Mzg4NSwiZXhwIjoxNzY2NjY1ODg1fQ.jA27EUT0hOrw7_WFfKUOcXd4vky-l5men2pLwi72o7Y"
+      }
+    })
+    
+}
+
+
+let mutation:any = useMutation({
+    mutationFn:missionDelete ,
+    onSuccess :()=>{
+        queryClient.invalidateQueries({ queryKey: ["ToDo"] });      
+    }
+})
+
+
+return {data:mutation.data , deleteMission:mutation.mutate ,deleteLodaing:mutation.isPending}
+
+
+
+
+
+  
+}
