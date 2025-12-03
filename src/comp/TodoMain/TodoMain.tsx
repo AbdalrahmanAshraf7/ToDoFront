@@ -8,7 +8,7 @@ export default function TodoMain() {
 
   const [searchValue, setSearchValue] = useState("")
   const [dropValue, setDropValue] = useState("")
-  let {isLoading} = useToDo();
+  let {isLoading} = useToDo("");
 
    
    

@@ -1,7 +1,7 @@
 import  { useState } from 'react'
 import useMission from '../../Hooks/MissionHooks/useMission'
 import useMissionFav from '../../Hooks/MissionHooks/useMissionFav.tsx'
-import DotLoadingscreen from "../LoadingScreens/DotLoadingscreen";
+import DotLoadingscreen from "../LoadingScreens/DotLoadingscreen.tsx";
 import { Link } from 'react-router-dom'
 
 export default function FavMissions() {

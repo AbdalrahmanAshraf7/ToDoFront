@@ -34,7 +34,7 @@ export default function editPriorityPop({showPop}:any) {
     </select>
 
     <button onClick={()=>{
-      if(Priority == 1 || Priority == 2 || Priority == 3 ){
+      if(Number(Priority) === 1 || Number(Priority)=== 2 || Number(Priority) === 3 ){
         priority({
           priority:Priority,
           ...showPop.priorityIds

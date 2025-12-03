@@ -19,7 +19,7 @@ export default function TodoBody({searchValue}:any) {
   const [showCreatPop, setShowCreatPop] = useState(false)
   const [showDeleteAll, setShowDeleteAll] = useState(false)
   const [showSelector, setShowSelector] = useState(false)
-  const [checkedItems, setCheckedItems] = useState([])
+  const [checkedItems, setCheckedItems] = useState<any[]>([])
 
 
 

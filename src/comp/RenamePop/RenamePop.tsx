@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import  {  useState } from 'react'
 import useMissionRename from '../../Hooks/MissionHooks/useMissionRename'
 
 export default function RenamePop({showPop}:any) {
 const [rename, setRename] = useState("")
-let{renameMission,renameLoading}:any = useMissionRename()
+let{renameMission}:any = useMissionRename()
 
 
 
