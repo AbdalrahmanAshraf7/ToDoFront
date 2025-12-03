@@ -40,7 +40,7 @@ export default function TodoBody({searchValue}:any) {
             if(e.target.checked){
               checkedItems.push(M._id)
             }else{
-              let filtered = checkedItems.filter((C,i)=> C !== M._id)
+              let filtered = checkedItems.filter((C)=> C !== M._id)
               setCheckedItems(filtered)
             }
           }} />
