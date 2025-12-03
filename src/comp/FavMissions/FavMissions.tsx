@@ -5,7 +5,7 @@ import DotLoadingscreen from "../LoadingScreens/DotLoadingscreen.tsx";
 import { Link } from 'react-router-dom'
 
 export default function FavMissions() {
-  let {missions , isLoading}:any = useMission()
+  let {missions , isLoading}:any = useMission("")
   let {fav , favLoading}:any = useMissionFav()
   const [itemId, setItemId] = useState(null)
   

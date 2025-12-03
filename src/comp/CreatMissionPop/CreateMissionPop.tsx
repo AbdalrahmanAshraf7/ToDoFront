@@ -3,7 +3,7 @@ import useMissionCreate from '../../Hooks/MissionHooks/useMissionCreate.tsx'
 
 export default function CreatMissionPop({showCreatPop}:any) {
 
-  let {data , createMission ,createLodaing}:any  = useMissionCreate()
+  let { createMission }:any  = useMissionCreate()
   const [missionName, setMissionName] = useState("")
   
 

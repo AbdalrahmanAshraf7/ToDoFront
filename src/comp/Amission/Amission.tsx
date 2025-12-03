@@ -3,7 +3,7 @@ import useGetTasks from '../../Hooks/TasksHooks/useGetTasks'
 import { useParams } from 'react-router-dom'
 import useCompletedTask from '../../Hooks/TasksHooks/useCompletedTask'
 import useFavTasks from '../../Hooks/TasksHooks/useFavTasks'
-import EditPriorityPop from "../EditPriorityPop/editPriorityPop"
+import EditPriorityPop from "../EditPriorityPop/EditPriorityPop"
 import EditTaskNamePop from '../EditTaskNamePop/EditTaskNamePop'
 import useDeleteTask from '../../Hooks/TasksHooks/useDeleteTask'
 import DeleteAllTasksPop from '../DeleteAllTasksPop/DeleteAllTasksPop'
@@ -17,7 +17,6 @@ export default function Amission() {
   let {favTask }:any = useFavTasks()
   const [showEditPriority, setShowEditPriority] = useState(false)
   const [showEditName, setShowEditName] = useState(false)
-  const [priorityIds, setPriorityIds] = useState(null)
   let {deleteTask}:any = useDeleteTask()
   const [deleteTasksPop, setDeleteTasksPop] = useState(false)
   const [showAddTask, setShowAddTask] = useState(false)
@@ -35,7 +34,12 @@ export default function Amission() {
 
 
 
+interface PriorityIds {
+  id: string;
+  id2?: string;
+}
 
+const [priorityIds, setPriorityIds] = useState<PriorityIds | null>(null);
     
   return <>
 

@@ -1,10 +1,10 @@
-import  { useState } from 'react'
+
 import useMissionsDeleteAll from '../../Hooks/MissionHooks/useMissionsDeleteAll.tsx'
 
 export default function DeleteAllMissions({showDeleteAll}:any) {
 
     let {deleteAllMission}:any = useMissionsDeleteAll()
-    const [missionName, setMissionName] = useState("")
+
   
 
 
