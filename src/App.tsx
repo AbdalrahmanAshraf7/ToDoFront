@@ -1,12 +1,8 @@
-import { useState } from 'react';
 import './App.css';
 import LayOut from "./comp/layOut/layOut";
 import Home from "./comp/TodoMain/TodoMain";
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import {
-  useQuery,
-  useMutation,
-  useQueryClient,
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'

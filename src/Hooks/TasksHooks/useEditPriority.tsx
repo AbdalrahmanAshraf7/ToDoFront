@@ -1,6 +1,5 @@
-import { QueryClient, useMutation, useQuery ,useQueryClient  } from '@tanstack/react-query'
+import {useMutation ,useQueryClient  } from '@tanstack/react-query'
 import axios from 'axios'
-import React from 'react'
 
 export default function useEditPriority() {
 

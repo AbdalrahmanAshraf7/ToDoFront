@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import  { useState } from 'react'
+
 import useEditPriority from '../../Hooks/TasksHooks/useEditPriority'
 
 export default function editPriorityPop({showPop}:any) {
 
-  let {priority  , data}:any = useEditPriority()
+  let {priority  }:any = useEditPriority()
   const [Priority, setPriority] = useState("")
 
 

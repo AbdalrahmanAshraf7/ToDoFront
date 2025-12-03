@@ -1,21 +1,10 @@
-import React from 'react'
-import { Link, Links } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import useDeleteBySelectM from '../../Hooks/MissionHooks/useDeleteBySelectM'
 
 
 export default function ToolBar({showPops}:any) {
 
 let {selectAndDelete}:any  = useDeleteBySelectM()
-
-
-
-
-
-
-
-
-
-  
 
   return <>
 

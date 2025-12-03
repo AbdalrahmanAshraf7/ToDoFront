@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import useMissionsDeleteAll from '../../Hooks/MissionHooks/useMissionsDeleteAll.tsx'
 
 export default function DeleteAllMissions({showDeleteAll}:any) {

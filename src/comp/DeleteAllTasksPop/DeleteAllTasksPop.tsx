@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import useDeleteTask from '../../Hooks/TasksHooks/useDeleteTask'
+
 import useDeleteAllTasks from '../../Hooks/TasksHooks/useDeleteAllTasks'
 
 

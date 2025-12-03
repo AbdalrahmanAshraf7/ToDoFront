@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
-import React from 'react'
+
 
 export default function useGetTasks(id:String) {
 
@@ -24,5 +24,5 @@ export default function useGetTasks(id:String) {
     let tasks = data?.data
 
 
-  return {tasks:tasks , }
+  return {tasks:tasks}
 }
