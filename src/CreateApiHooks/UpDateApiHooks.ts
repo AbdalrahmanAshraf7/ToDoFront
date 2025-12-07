@@ -26,7 +26,7 @@ export default function upDateHook (url:any){
                       return axiosInstance[url.method](`${url.url}`,{data:{}})
                     }
                     else{
-                    return axiosInstance[url.method](`${url.url}${  data.id ?? ""}/${data.id2?data.id2:""}`,{data:{Ids:data.Ids}}??{})
+                    return axiosInstance[url.method](`${url.url}${  data.id ?? ""}/${data.id2?data.id2:""}`,{data:{Ids:data.Ids}})
                     }
             
                 } 

@@ -1,6 +1,6 @@
 import  { createContext, useState } from 'react'
 
-export const Loader:any = createContext<any>()
+export const Loader:any = createContext("")
 
 export default function LoadingContext({children}:any) {
 
