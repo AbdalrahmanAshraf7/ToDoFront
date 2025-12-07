@@ -16,17 +16,17 @@ export default function upDateHook (url:any){
 
         let mutation =  useMutation({
             mutationKey : ["ToDo" , url.url ],
-            mutationFn: (data?:any)=>{
+            mutationFn: (data: { id?: string; id2?: string; Ids?: any } = {})=>{
                 
-                if(url.method==="put") return axiosInstance[url.method](`${url.url}${data.id}/${data.id2?data.id2:""}`,data)
-                else if(url.method==="post") return axiosInstance[url.method](`${url.url}${data.id?data.id:""}/${data.id2?data.id2:""}`,data)
+                if(url.method==="put") return axiosInstance.put(`${url.url}${data.id??""}/${data.id2?data.id2:""}`,data)
+                else if(url.method==="post") return axiosInstance.post(`${url.url}${data.id?data.id:""}/${data.id2?data.id2:""}`,data)
                 else if(url.method==="delete"){
 
                     if(!data.id && !data.Ids){
-                      return axiosInstance[url.method](`${url.url}`,{data:{}})
+                      return axiosInstance.delete(`${url.url}`,{data:{}})
                     }
                     else{
-                    return axiosInstance[url.method](`${url.url}${  data.id ?? ""}/${data.id2?data.id2:""}`,{data:{Ids:data.Ids}})
+                    return axiosInstance.delete(`${url.url}${  data.id ?? ""}/${data.id2?data.id2:""}`,{data:{Ids:data.Ids}})
                     }
             
                 } 
