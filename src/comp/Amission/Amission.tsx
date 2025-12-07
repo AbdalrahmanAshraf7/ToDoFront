@@ -65,7 +65,7 @@ const [priorityIds, setPriorityIds] = useState<PriorityIds | null>(null);
   </div>
 
   {
-    UpdateLoader ? <DotLoadingscreen  ></DotLoadingscreen>:
+    UpdateLoader || !tasks  ? <DotLoadingscreen  ></DotLoadingscreen>:
 
     <div className=' flex flex-col  items-center mt-5 '>
     <div className='bg-blue-700 flex flex-col w-[94%] rounded-lg'>
