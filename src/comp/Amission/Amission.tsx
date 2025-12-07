@@ -103,7 +103,7 @@ const [priorityIds, setPriorityIds] = useState<PriorityIds | null>(null);
                 </div>
 
                 <div className='flex md:flex-row flex-col items-center gap-5 '>
-                  <i className="fa-regular fa-trash-can text-2xl text-blue-700 cursor-pointer" onClick={()=>{
+                  <i className="fa-regular fa-trash-can md:text-2xl text-5xl text-blue-700 cursor-pointer" onClick={()=>{
                     TaskDelete({
                       id:id,
                     id2:T._id
@@ -111,7 +111,7 @@ const [priorityIds, setPriorityIds] = useState<PriorityIds | null>(null);
                   }}></i>
                  {
                   CompletedLoading && T._id==loaderId ?<div className='text-white text-sm font-bold'>loading...</div>:
-                   <i className={`fa-solid fa-circle-check text-2xl cursor-pointer ${T.completed ? "text-green-500" : null}`} onClick={()=>{
+                   <i className={`fa-solid fa-circle-check md:text-2xl text-5xl cursor-pointer ${T.completed ? "text-green-500" : null}`} onClick={()=>{
                     TaskComplete({
                     id:id,
                     id2:T._id
@@ -121,7 +121,7 @@ const [priorityIds, setPriorityIds] = useState<PriorityIds | null>(null);
                  }
                   {
                     FavLoading &&T._id==loaderId ?<div className='text-white text-sm font-bold'>loading...</div>:
-                    <i className={`fa-solid fa-heart text-2xl cursor-pointer ${T.fav ? "text-red-800" : null}`} onClick={()=>{ 
+                    <i className={`fa-solid fa-heart md:text-2xl text-5xl cursor-pointer ${T.fav ? "text-red-800" : null}`} onClick={()=>{ 
                         TaskFav({
                       id:id,
                       id2:T._id
