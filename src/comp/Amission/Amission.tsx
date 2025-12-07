@@ -95,14 +95,14 @@ const [priorityIds, setPriorityIds] = useState<PriorityIds | null>(null);
               T?.tasks?.map((T:any )=>{return<>
               <div key={T._id } className={`${T.priority ==null ?null :T.priority==1 ? "low-gradient" :T.priority==2?"med-gradient":T.priority==3?"heigh-gradient":"bg-red-950"} bg-red-950 p-5 mt-3 flex justify-between text-white rounded-lg `}>
                 <div className='md:text-xl text-sm md:font-bold capitalize'>
-                  {T.name}
+                  {T.name.length>5 ? T?.name?.slice(0,4)+"..." : T.name}
                   <span><i className="fa-regular fa-pen-to-square cursor-pointer" onClick={()=>{setShowEditName(true)  ; setPriorityIds({
                       id:id,
                       id2:T._id
                     })}}></i></span>
                 </div>
 
-                <div className='flex items-center gap-5'>
+                <div className='flex md:flex-row flex-col items-center gap-5 '>
                   <i className="fa-regular fa-trash-can text-2xl text-blue-700 cursor-pointer" onClick={()=>{
                     TaskDelete({
                       id:id,
