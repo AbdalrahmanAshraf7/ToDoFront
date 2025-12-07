@@ -30,6 +30,7 @@ export default function upDateHook (url:any){
                     }
             
                 } 
+                   return Promise.resolve(null);
             },
             onMutate :()=>{
                 if(url.method === "post") return setUpdateLoader(true)
